@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #333;
+  padding-top: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bg-orange { background-color: #FF985D; }
+.text-orange { color: #FF985D; }
+.text-yellow { color: #FFCB65; }
+
+.nutricate {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-div {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.section-1 { flex: 1; }
+
+.custom-btn {
+  width: 200px;
+  background-color: #FF985D;
+  color: white;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle img {
+  width: 30px;
+  height: 30px;
+}
+
+.img-circle-wrapper {
+  background-color: #f97316;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-img {
+  width: 320px;
+  position: relative;
+}
+
+.feature-img-top {
+  position: absolute;
+  top: -84px;
+  width: 350px;
+  z-index: 2;
+}
+
+.features-grid {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.feature-box {
+  width: 120px;
+  height: 120px;
+  border: 2px solid orange;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.2;
+  position: absolute;
+}
+
+.feature-box:nth-child(1) { top: 0; left: 0; }
+.feature-box:nth-child(2) { top: 0; right: 0; }
+.feature-box:nth-child(3) { top: 90px; left: 90px; z-index: 1; }
+.feature-box:nth-child(4) { top: 90px; left: 275px; }
+
+.plans-section{
+    margin-top: -100px;
+}
+
+.about-plans-wrapper {
+  background: linear-gradient(to bottom, #FFBB94 70%, white 30%);
+}
+
+.about-section {
+  background: linear-gradient(to bottom, #ffffff 0%, #FFBB94 100%);
+  height: 90vh;
+}
+
+footer .icon {
+  width: 20px;
+}

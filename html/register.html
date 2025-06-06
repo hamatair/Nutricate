@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nutricate</title>
+  <link rel="stylesheet" href="../css/register.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container" id="image-section">
+      <img src="../assets/Images/register-1.png" id="form-image" alt="Nutricate"/>
+    </div>
+    <div class="form-container">
+      <div class="steps">
+        <div class="circle active"><h1>1</h1></div>
+        <div class="line"></div>
+        <div class="circle"><h1>2</h1></div>
+        <div class="line"></div>
+        <div class="circle"><h1>3</h1></div>
+      </div>
+      <form id="multiStepForm">
+        <div class="form-step active">
+          <h2>How intense is your exercise level?</h2>
+          <label><input type="radio" name="exercise" value="Very Rarely Exercise"/><span>Very Rarely Exercise</span></label>
+          <label><input type="radio" name="exercise" value="Rarely Exercise"/><span>Rarely Exercise</span></label>
+          <label><input type="radio" name="exercise" value="Often Exercising"/><span>Often Exercising</span></label>
+          <label><input type="radio" name="exercise" value="Very Often Exercising"/><span>Very Often Exercising</span></label>
+        </div>
+        <div class="form-step">
+          <h2>What is your gender?</h2>
+          <div class="gender-options">
+            <label>
+              <input type="radio" name="gender" value="Male" />
+              <span>Male</span>
+            </label>
+            <label>
+              <input type="radio" name="gender" value="Female" />
+              <span>Female</span>
+            </label>
+          </div>
+
+          <h2>How old are you?</h2>
+          <input type="number" name="age" placeholder="Enter your age"/>
+          <h2>Where do you live?</h2>
+          <select name="region">
+            <option value="">Choose your region</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="America">America</option>
+          </select>
+        </div>
+        <div class="form-step">
+          <h2>How much do you weight?</h2>
+          <input type="number" name="weight" placeholder="*kg"/>
+          <h2>How tall are you?</h2>
+          <input type="number" name="height" placeholder="*cm"/>
+        </div>
+        <button type="button" id="nextBtn">Next</button>
+      </form>
+    </div>
+  </div>
+  <script src="../js/register.js"></script>
+</body>
+</html>

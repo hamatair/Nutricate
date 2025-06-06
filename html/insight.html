@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nutricate - Health Insights</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/insight.css" />
+</head>
+<body>
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <aside class="sidebar d-flex flex-column justify-content-between p-3">
+  <!-- Logo dan Navigasi -->
+  <div>
+    <h1 class="fw-bold logo-text text-orange fs-2">NUTRI<span class="text-yellow">CATE</span></h1>
+    <ul class="nav flex-column mt-4">
+      <li class="nav-item mb-2">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-2">
+          <img src="../assets/Icons/Dashboard.png" alt="Dashboard Icon"> Dashboard
+        </a>
+      </li>
+      <li class="nav-item mb-2">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-2">
+          <img src="../assets/Icons/Healthy-menu.png" alt="Healthy Menu Icon"> Healthy Menu
+        </a>
+      </li>
+      <li class="nav-item mb-2">
+        <a href="#" class="nav-link text-dark d-flex align-items-center gap-2">
+          <img src="../assets/Icons/Meal-plan.png" alt="Meal Plan Icon"> Meal Plan
+        </a>
+      </li>
+      <li class="nav-item mb-2">
+        <a href="#" class="nav-link active-link d-flex align-items-center gap-2">
+          <img src="../assets/Icons/Insight.png" alt="Health Insights Icon"> Health Insights
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Logout -->
+  <button class="btn btn-light w-100 d-flex align-items-center gap-2 text-muted shadow-sm rounded-pill px-3 py-2">
+    <img src="../assets/Icons/logout.png" alt="logout icon"> Logout
+  </button>
+</aside>
+
+
+
+    <!-- Main Content -->
+    <main class="flex-fill p-4 bg-light">
+      <div class="container-fluid">
+        <!-- Header -->
+        <div class="text-center mb-4">
+          <h2 class="text-center">Healthy Insights</h2>
+          <input type="text" class="form-control w-75 mx-auto" placeholder="Search articles...">
+        </div>
+
+        <!-- Filters -->
+        <div class="mb-3 text-center">
+          <button class="btn btn-warning btn-sm me-2">All</button>
+          <button class="btn btn-outline-secondary btn-sm me-2">Nutrition & Wellness</button>
+          <button class="btn btn-outline-secondary btn-sm me-2">Health & Lifestyle</button>
+          <button class="btn btn-outline-secondary btn-sm me-2">Fitness & Nutrition</button>
+          <button class="btn btn-outline-secondary btn-sm me-2">Mental Health & Wellness</button>
+        </div>
+
+        <div class="row mb-5">
+            <!-- Featured Article -->
+            <div class="col-md-6">
+                <section class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Featured Article</h5>
+                        <a href="#" class="text-decoration-none small">See All</a>
+                    </div>
+                    <div class="bg-white rounded shadow-sm overflow-hidden row g-3">
+                        <div class="col-12">
+                            <img src="../assets/Images/insight-1.png" class="img-fluid rounded mb-2 custom-img-featured" alt="Featured">
+                            <span class="text-success small d-block">Health & Wellness - Sept 15, 2028</span>
+                            <h6>The Importance of Hydration for Optimal Health</h6>
+                            <p class="mb-1 text-muted">Learn how proper hydration impacts your overall health, energy levels, and mental clarity...</p>
+                            <span class="me-2 rounded-circle d-inline-block insight-circle-1"></span>
+                            <small class="text-dark">Dr. Amelia Johnson</small>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Popular Insights -->
+            <div class="col-md-6">
+                <section class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">Popular Insights</h5>
+                        <a href="#" class="text-decoration-none small">See All</a>
+                    </div>
+
+                    <!-- Insight 1 -->
+                    <div class="bg-white rounded shadow-sm overflow-hidden row g-3 mb-4">
+                        <div class="col-4">
+                            <img src="../assets/Images/insight-2.png" class="img-fluid rounded" alt="Workout Performance">
+                        </div>
+                    <div class="col-8">
+                        <span class="text-success small d-block">Fitness & Nutrition • Sept 20, 2028</span>
+                        <h6 class="mb-1">How Nutrient Timing Affects Your Workout Performance</h6>
+                        <p class="small text-muted mb-1">
+                        Discover the science behind nutrient timing and how it can improve your workout results. Learn the best times to eat for energy, recovery, and muscle growth.
+                        </p>
+                        <small class="d-flex align-items-center">
+                        <span class="me-2 rounded-circle d-inline-block insight-circle-1"></span>
+                        Coach Daniel Green
+                        </small>
+                    </div>
+                    </div>
+
+                    <!-- Insight 2 -->
+                    <div class="bg-white rounded shadow-sm overflow-hidden row g-3">
+                    <div class="col-4">
+                        <img src="../assets/Images/insight-3.png" class="img-fluid rounded" alt="Hydration Hacks">
+                    </div>
+                    <div class="col-8">
+                        <span class="text-success small d-block">Health Tips • Sept 18, 2028</span>
+                        <h6 class="mb-1">Hydration Hacks for a Busy Lifestyle</h6>
+                        <p class="small text-muted mb-1">
+                        This video shares quick and practical hydration tips to help you stay hydrated even with a hectic schedule. Perfect for on-the-go individuals!
+                        </p>
+                        <small class="d-flex align-items-center">
+                        <span class="me-2 rounded-circle d-inline-block insight-circle-2"></span>
+                        Dr. Emily Stevens
+                        </small>
+                    </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+
+        <!-- Recommended Section -->
+        <section class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Recommended Article</h5>
+                <a href="#" class="text-decoration-none small">See All</a>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <!-- Card 1 -->
+                <div class="col-md-3">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <img src="../assets/Images/insight-4.png" class="img-fluid rounded-top custom-img-recommended" alt="Brain Function">
+                        <div class="p-3">
+                            <small class="text-success d-block mb-1">Nutrition & Wellness</small>
+                            <h6 class="mb-1">Superfoods for Better Brain Function</h6>
+                            <small class="text-muted">Sept 5, 2028</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-3">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <img src="../assets/Images/insight-5.png" class="img-fluid rounded-top custom-img-recommended" alt="Fasting">
+                        <div class="p-3">
+                            <small class="text-success d-block mb-1">Health & Lifestyle</small>
+                            <h6 class="mb-1">The Benefits of Intermittent Fasting for Longevity</h6>
+                            <small class="text-muted">Aug 30, 2028</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-3">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <img src="../assets/Images/insight-6.png" class="img-fluid rounded-top custom-img-recommended" alt="Stretching">
+                        <div class="p-3">
+                            <small class="text-success d-block mb-1">Fitness Tips</small>
+                            <h6 class="mb-1">Stretching Routines to Boost Flexibility</h6>
+                            <small class="text-muted">Sept 3, 2028</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <img src="../assets/Images/insight-7.png" class="img-fluid rounded-top custom-img-recommended" alt="Healthy Breakfast">
+                        <div class="p-3">
+                            <small class="text-success d-block mb-1">Nutrition Hacks</small>
+                            <h6 class="mb-1">Quick & Healthy Breakfast Ideas for Busy Mornings</h6>
+                            <small class="text-muted">Aug 25, 2028</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer class="d-flex justify-content-between border-top pt-3 mt-5">
+          <small>&copy; 2024 Peterdraw</small>
+          <div>
+            <a href="#" class="text-decoration-none me-3 text-muted">Privacy Policy</a>
+            <a href="#" class="text-decoration-none me-3 text-muted">Terms and Conditions</a>
+            <a href="#" class="text-decoration-none text-muted">Contact</a>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="bg-white border-start p-3" style="width: 400px;">
+    <!-- Trending Tags -->
+        <div class="mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="mb-0">Trending Tags</h6>
+            </div>
+            <ul class="list-unstyled small">
+            <li class="mb-2">
+                <strong>#Hydration</strong><br>
+                <span class="text-success custom-tag">Health & Wellness</span> &nbsp;
+                <span class="custom-tag">• 8 posts</span>
+            </li>
+            <li class="mb-2">
+                <strong>#IntermittentFasting</strong><br>
+                <span class="text-success custom-tag">Health & Lifestyle</span> &nbsp;
+                <span class="custom-tag">• 12 posts</span>
+            </li>
+            <li class="mb-2">
+                <strong>#Superfoods</strong><br>
+                <span class="text-success custom-tag">Nutrition & Wellness</span> &nbsp;
+                <span class="custom-tag">• 15 posts</span>
+            </li>
+            <li class="mb-2">
+                <strong>#MindfulEating</strong><br>
+                <span class="text-success custom-tag">Mental Health & Wellness</span> &nbsp;
+                <span class="custom-tag">• 6 posts</span>
+            </li>
+            <li class="mb-2">
+                <strong>#BalancedBites</strong><br>
+                <span class="text-success custom-tag">Mental Health & Wellness</span> &nbsp;
+                <span class="custom-tag">• 5 posts</span>
+            </li>
+            <li class="mb-2">
+                <strong>#PostWorkoutNutrition</strong><br>
+                <span class="text-success custom-tag">Fitness & Nutrition</span> &nbsp;
+                <span class="custom-tag">• 10 posts</span>
+            </li>
+            </ul>
+            <button class="btn btn-outline-secondary btn-sm">Show More</button>
+        </div>
+
+        <!-- Top Author -->
+        <div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="mb-0">Top Author</h6>
+            </div>
+            <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-3">
+                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #fc8f2b;"></div>
+                <div>
+                <strong class="small">Chef Michael Harris</strong><br>
+                <small class="text-muted">90K Followers</small>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #fdd74b;"></div>
+                <div>
+                <strong class="small">Dr. Sarah Collins</strong><br>
+                <small class="text-muted">85K Followers</small>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #60d394;"></div>
+                <div>
+                <strong class="small">Coach Daniel Green</strong><br>
+                <small class="text-muted">72K Followers</small>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #f16262;"></div>
+                <div>
+                <strong class="small">Jane Murray</strong><br>
+                <small class="text-muted">65K Followers</small>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #5aa9e6;"></div>
+                <div>
+                <strong class="small">Dr. Emily Thompson</strong><br>
+                <small class="text-muted">56K Followers</small>
+                </div>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #a06cd5;"></div>
+                <div>
+                <strong class="small">Coach Adam Maes</strong><br>
+                <small class="text-muted">46K Followers</small>
+                </div>
+            </li>
+            </ul>
+            <button class="btn btn-outline-secondary btn-sm">Show More</button>
+        </div>
+    </aside>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

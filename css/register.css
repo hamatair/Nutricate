@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Full screen height */
+  width: 100vw;
+}
+
+.image-container {
+  flex: 2;
+  background-color: #ffe3cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.image-container img {
+  width: 200%;
+}
+
+.form-container {
+  flex: 1;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: white;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.circle.active {
+  background-color: #ff914d;
+}
+
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.line.active {
+  background: #ff914d;
+}
+
+form h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ff914d;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+label span {
+  display: block;
+  padding: 12px 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+  color: #333;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: center; /* opsional, kalau mau di tengah */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gender-options input[type="radio"] {
+  display: none;
+}
+
+.gender-options span {
+  padding: 10px 100px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.gender-options input[type="radio"]:checked + span {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+
+/* HIDE the actual radio circle */
+label input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+
+label input[type="radio"]:checked + span {
+  background-color: #ff9900;
+  color: white;
+  font-weight: bold;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff7b29;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* Highlight jika input error */
+input.error, select.error {
+  border: 2px solid #e74c3c;
+  background-color: #ffecec;
+}
+
+label.error-text {
+  color: #e74c3c;
+}
