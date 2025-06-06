@@ -2,7 +2,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  width: 100%;         /* Ganti dari 100vw */
+  width: 100%;         
   overflow-x: hidden;
 }
 
@@ -32,7 +32,7 @@ body {
   width: 250px;
   position: relative;
   padding: 0;
-  flex: 0 0 250px; /* Sidebar fix 250px, tidak shrink */
+  flex: 0 0 250px; 
   min-width: 250px;
   max-width: 250px;
   z-index: 2;
@@ -264,7 +264,7 @@ body {
 .notes-dot {
   width: 18px;
   height: 18px;
-  background: #C2E66E; /* Ubah ke warna baru */
+  background: #C2E66E; 
   border-radius: 50%;
   display: inline-block;
   margin-top: 4px;
@@ -523,7 +523,7 @@ body {
 /* Right Sidebar */
 .right-sidebar {
   width: 100%;
-  padding: 2rem 1rem 0 1rem;  /* Tambah padding horizontal */
+  padding: 2rem 1rem 0 1rem;  
   margin: 0;
   box-sizing: border-box;
 }
@@ -783,7 +783,7 @@ body {
 .notes-dot {
   width: 18px;
   height: 18px;
-  background: #C2E66E; /* Ubah ke warna baru */
+  background: #C2E66E; 
   border-radius: 50%;
   display: inline-block;
   margin-top: 4px;
@@ -1062,7 +1062,7 @@ body {
   padding: 0;
 }
 
-/* Konsistensi Sidebar/Navbar dengan Dashboard */
+
 .sidebar {
   background: #fff;
   min-height: 100vh;
@@ -1198,7 +1198,7 @@ body {
   flex-direction: column;
   z-index: 1;
   background: #FFF9F3;
-  /* Hapus padding/margin kiri jika ada */
+ 
 }
 
 .header-title-group {

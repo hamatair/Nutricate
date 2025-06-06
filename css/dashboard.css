@@ -574,25 +574,25 @@ header .text-muted {
     color: var(--primary-orange);
 }
 
-/* Samakan warna card Calories Intake, Weight, dan Health Tip */
+
 .weight-card,
 .card[style*="Calories Intake"] {
     background: linear-gradient(135deg, #FFF9E6, #fff 80%) !important;
 }
 
-/* Health Tip Card tetap */
+
 .health-tip-card {
     background: linear-gradient(135deg, #FFF9E6, #fff 80%);
 }
 
-/* Bar di Calories Intake jadi orange */
+
 .carbs-bar,
 .protein-bar,
 .fats-bar {
     background: linear-gradient(90deg, var(--primary-orange), #FFB877) !important;
 }
 
-/* Perbesar lingkaran marker bar weight data jika perlu */
+
 .weight-marker-big {
     width: 32px !important;
     height: 32px !important;
@@ -613,7 +613,7 @@ header .text-muted {
 /* Responsive Design */
 @media (max-width: 1200px) {
     .dashboard-grid {
-        grid-template-columns: 200px 1fr 420px; /* sidebar lebih kecil, main lebih kecil, sidebar right lebih besar */
+        grid-template-columns: 200px 1fr 420px; 
     }
     .sidebar-right {
         min-width: 420px;
