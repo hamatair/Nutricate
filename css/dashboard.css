@@ -1,0 +1,670 @@
+/* Custom CSS for NutriCare Dashboard */
+
+:root {
+    --primary-orange: #FF8C42;
+    --light-orange: #FFE5D1;
+    --dark-orange: #E67326;
+    --yellow: #FFD93D;
+    --green: #6BCF7F;
+    --light-gray: #F8F9FA;
+    --medium-gray: #E9ECEF;
+    --dark-gray: #6C757D;
+    --text-dark: #212529;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout grid for dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 200px 32px 1fr 40px 420px; 
+    grid-template-rows: 100vh;
+    min-height: 100vh;
+    background: var(--light-gray);
+}
+
+.sidebar {
+    width: 200px;
+    min-width: 200px;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 10;
+}
+
+.main-panel {
+    grid-column: 3; 
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sidebar-right {
+    grid-column: 5; 
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgba(255,255,255,0.7) !important;
+    border-left: 1.5px solid #eee;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    min-width: 320px;
+}
+.sidebar-right > .card {
+    flex: 1 1 auto;
+    background: #fff;
+    margin-bottom: 1.5rem;
+}
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; 
+    margin: 1rem 0; 
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background:rgba(255,255,255,0.7) !important;
+    border-right: 1.5px solid #eee;
+    min-height: 100vh;
+    color: var(--primary-orange);
+    position: fixed;
+    width: 240px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+} 
+
+.sidebar-header {
+    border-bottom: 1px rgba(255,255,255,0.7) !important;
+    padding-bottom: 0.5rem;
+}
+
+.brand-text {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--primary-orange);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.sidebar .nav-link {
+    color: #8A8C90;
+    padding: 12px 18px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:active {
+    color: #222 !important;
+    font-weight: 700;
+    background: var(--light-orange);
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-bottom: 1rem;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    background: var(--light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    padding: 5.5rem 2rem 1rem 2rem;
+}
+
+header h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+header .text-muted {
+    color: #888 !important;
+    font-size: 1rem;
+}
+
+.search-box input {
+    border-radius: 25px;
+    border: 1px solid var(--medium-gray);
+    padding: 8px 16px;
+    width: 260px;
+    font-size: 1rem;
+    background: #fafafa;
+}
+
+.user-profile .profile-pic {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-orange), var(--yellow));
+    border-radius: 50%;
+}
+
+.user-profile {
+    gap: 10px;
+}
+
+.user-profile .fw-bold {
+    font-weight: 700;
+}
+
+.user-profile small {
+    font-size: 0.85rem;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    background-color: var(--light-gray);
+    min-height: calc(100vh - 140px);
+    padding: 2rem 2rem 0 2rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    background: #fff;
+    margin-bottom: 1.5rem; 
+}
+
+.weight-card {
+    background: linear-gradient(135deg, var(--light-orange), #fff 80%);
+}
+
+.weight-display {
+    margin: 20px 0;
+}
+
+.weight-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-orange);
+}
+
+.weight-unit {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin-left: 5px;
+}
+
+.weight-edit-btn {
+    background: var(--primary-orange);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.weight-scale {
+    position: relative;
+    margin: 20px 0;
+}
+
+.scale-line {
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-orange), var(--yellow));
+    border-radius: 3px;
+    position: relative;
+}
+
+.scale-marker {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 3px solid var(--primary-orange);
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    left: 60%;
+    transform: translateX(-50%);
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+}
+
+/* Weight Chart */
+.weight-chart {
+    text-align: center;
+    position: relative;
+}
+
+.chart-circle {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    position: relative;
+    background: conic-gradient(
+        var(--primary-orange) 0deg 200deg,
+        var(--yellow) 200deg 360deg
+    );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-circle::before {
+    content: '';
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.chart-center {
+    z-index: 2;
+    text-align: center;
+    position: relative;
+}
+
+.chart-weight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.chart-info {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    line-height: 1.2;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+/* Health Tip Card */
+.health-tip-card {
+    background: linear-gradient(135deg, #FFF9E6, #fff 80%);
+}
+
+.tip-icon {
+    font-size: 1.5rem;
+}
+
+.tip-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+
+/* Calories Chart */
+.calories-chart {
+    text-align: center;
+}
+
+.calories-circle {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    background: conic-gradient(
+        var(--primary-orange) 0deg 140deg,
+        var(--medium-gray) 140deg 360deg
+    );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calories-circle::before {
+    content: '';
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.calories-center {
+    z-index: 2;
+    text-align: center;
+    position: relative;
+}
+
+.calories-number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.calories-text {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+}
+
+/* Nutrition Bars */
+.nutrition-item {
+    margin-bottom: 15px;
+}
+
+.progress {
+    height: 8px;
+    background-color: var(--medium-gray);
+    border-radius: 6px;
+}
+
+.carbs-bar {
+    background: linear-gradient(90deg, var(--yellow), #FFE066);
+}
+
+.protein-bar {
+    background: linear-gradient(90deg, var(--primary-orange), #FF9F5C);
+}
+
+.fats-bar {
+    background: linear-gradient(90deg, #FF6B6B, #FF8E8E);
+}
+
+/* Calendar */
+.calendar-card {
+    background: #fff;
+}
+
+.calendar-grid {
+    text-align: center;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+}
+
+.calendar-days span {
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.calendar-days span.active {
+    background: var(--primary-orange);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Meal Schedule */
+.meal-item {
+    margin-bottom: 20px;
+}
+
+.meal-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+.meal-check {
+    color: var(--green);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.meal-name {
+    font-weight: 600;
+    flex: 1;
+}
+
+.meal-calories {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.meal-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.meal-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.meal-info h6 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.meal-nutrients {
+    display: flex;
+    gap: 10px;
+}
+
+.meal-nutrients img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.meal-nutrients span {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    background: var(--light-gray);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Recent Activity */
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.activity-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-orange);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.activity-info {
+    flex: 1;
+}
+
+.activity-time {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+}
+
+.activity-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer-section {
+    background: #fff;
+    margin-top: auto;
+}
+
+.footer-links a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-orange);
+}
+
+.social-icons a {
+    color: var(--dark-gray);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-orange);
+}
+
+/* Samakan warna card Calories Intake, Weight, dan Health Tip */
+.weight-card,
+.card[style*="Calories Intake"] {
+    background: linear-gradient(135deg, #FFF9E6, #fff 80%) !important;
+}
+
+/* Health Tip Card tetap */
+.health-tip-card {
+    background: linear-gradient(135deg, #FFF9E6, #fff 80%);
+}
+
+/* Bar di Calories Intake jadi orange */
+.carbs-bar,
+.protein-bar,
+.fats-bar {
+    background: linear-gradient(90deg, var(--primary-orange), #FFB877) !important;
+}
+
+/* Perbesar lingkaran marker bar weight data jika perlu */
+.weight-marker-big {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1.15rem !important;
+    line-height: 28px !important;
+}
+
+/* Footer sejajar kiri di mobile */
+.footer-section .footer-links {
+    margin-bottom: 0.5rem;
+}
+@media (max-width: 991px) {
+    .footer-section .footer-links {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: 200px 1fr 420px; /* sidebar lebih kecil, main lebih kecil, sidebar right lebih besar */
+    }
+    .sidebar-right {
+        min-width: 420px;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .dashboard-grid {
+        grid-template-columns: 60px 1fr;
+    }
+    .sidebar-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1.5px solid #eee;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .dashboard-content {
+        padding: 1rem 0.2rem 0 0.2rem;
+    }
+    .search-box input {
+        width: 120px;
+    }
+    .user-profile {
+        display: none;
+    }
+}
+
+.profile-pic-square {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #FFD6E0 40%, #FFF9E6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-pic-square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

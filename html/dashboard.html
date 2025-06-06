@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriCare Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-grid">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header p-3">
+                <h3 class="brand-text">NUTRICARE</h3>
+            </div>
+            <nav class="nav flex-column p-3">
+                <a class="nav-link active" href="">
+                    <img src="../img/SquaresFour.png" alt="Dashboard" style="width:20px; height:20px; margin-right:10px;">
+                    Dashboard
+                </a>
+                <a class="nav-link" href="#">
+                    <img src="../img/ForkKnife.png" alt="Healthy Menu" style="width:20px; height:20px; margin-right:10px;">
+                    Healthy Menu
+                </a>
+                <a class="nav-link" href="#">
+                    <img src="../img/BowlFood.png" alt="Meal Plan" style="width:20px; height:20px; margin-right:10px;">
+                    Meal Plan
+                </a>
+                <a class="nav-link" href="#">
+                    <img src="../img/Heartbeat.png" alt="Health Insights" style="width:20px; height:20px; margin-right:10px;">
+                    Health Insights
+                </a>
+            </nav>
+            <div class="sidebar-footer p-3 mt-auto">
+                <a href="#" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-panel" style="margin-left:32px;">
+            <!-- Header -->
+            <header class="d-flex justify-content-between align-items-center py-3 px-4 border-bottom">
+                <div>
+                    <h2 class="mb-1">Hello, Suryanto! 👋</h2>
+                    <p class="text-muted mb-0">Let's begin our journey to better health today</p>
+                </div>
+                <div class="search-box position-relative">
+                    <span class="position-absolute" style="left:16px;top:50%;transform:translateY(-50%);color:#bbb;">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <input type="text" class="form-control ps-5" placeholder="Search anything" style="width:260px;">
+                </div>
+            </header>
+
+            <!-- Cards Grid -->
+            <section class="cards-grid" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 2rem;">
+                <!-- Weight Card (full width, top) -->
+                <div class="card weight-card" style="grid-column: 1 / span 2;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>Weight</h5>
+                        </div>
+                        <div class="weight-display">
+                            <span class="weight-number">78</span>
+                            <span class="weight-unit">kg</span>
+                        </div>
+                        <div class="weight-scale" style="position:relative;">
+                            <div class="scale-line"></div>
+                            <div class="scale-marker" style="left:65%;"></div>
+                            <div class="scale-labels">
+                                <span>65</span>
+                                <span>70</span>
+                                <span>75</span>
+                                <span>80</span>
+                                <span>85</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weight Data & Health Tip Card (margin atas 2rem, lingkaran angka besar) -->
+                <div class="card" style="grid-column: 1 / span 2; background: #FFF9F3; margin-top:2rem;">
+                    <div class="card-body d-flex flex-column flex-md-row align-items-stretch p-0">
+                        <!-- Weight Data Bar -->
+                        <div class="flex-grow-1 d-flex flex-column justify-content-center p-4" style="min-width:240px; max-width:50%;">
+                            <div class="d-flex justify-content-between align-items-center mb-3 w-100">
+                                <h6>Weight Data</h6>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                            <div>
+                                <div style="font-size:2rem; font-weight:700; color:#FF8C42;">78 <span style="font-size:1rem; color:#888;">kg</span></div>
+                                <div style="color:#888; font-size:0.98rem; margin-bottom:8px;">Current Weight <span style="font-size:0.95rem;">| 13 kg left</span></div>
+                                <!-- Bar Diagram -->
+                                <div style="width:100%; max-width:260px; margin:18px 0 0 0;">
+                                    <div style="display:flex; justify-content:space-between; font-size:0.95rem; color:#888; margin-bottom:4px;">
+                                        <span>65</span>
+                                        <span>85</span>
+                                    </div>
+                                    <div style="background:#FFE5D1; border-radius:8px; height:18px; width:100%; position:relative;">
+                                        <div style="background:linear-gradient(90deg,#FF8C42,#FFD93D); height:100%; border-radius:8px; width:72%;"></div>
+                                        <div style="position:absolute; left:72%; top:-12px;">
+                                            <span style="display:inline-block; background:#fff; border:2px solid #FF8C42; border-radius:50%; width:32px; height:32px; text-align:center; line-height:28px; font-size:1.15rem; color:#FF8C42; font-weight:700;">78</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pembatas Vertikal -->
+                        <div class="vr d-none d-md-block" style="width:2px; background:#FF985D; margin:32px 0;"></div>
+                        <!-- Health Tip -->
+                        <div class="flex-grow-1 d-flex flex-column justify-content-center p-4" style="min-width:240px; max-width:50%;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <span class="tip-icon" style="background:#FFD6E0; color:#FF8C42; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </span>
+                                    <h6 class="mb-0 ms-2" style="font-weight:700; color:#333;">Health Tip of the Day</h6>
+                                </div>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                            <p class="tip-text" style="color:#888; font-size:1rem;">
+                                "Did you know that eating a balanced breakfast can kickstart your metabolism and keep you energized throughout the day? Try incorporating a mix of protein, fiber, and healthy fats."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calories Intake Card (full width, row 3) -->
+                <div class="card" style="grid-column: 1 / span 2;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h6>Calories Intake</h6>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-5 d-flex justify-content-center">
+                                <div class="calories-chart">
+                                    <svg width="180" height="180" viewBox="0 0 180 180">
+                                        <circle cx="90" cy="90" r="80" fill="none" stroke="#E9ECEF" stroke-width="16"/>
+                                        <circle cx="90" cy="90" r="80" fill="none" stroke="#FF8C42" stroke-width="16"
+                                            stroke-dasharray="502.65" stroke-dashoffset="320" stroke-linecap="round"
+                                            transform="rotate(-90 90 90)"/>
+                                        <text x="90" y="95" text-anchor="middle" font-size="1.7rem" fill="#FF8C42" font-weight="bold">250 kcal</text>
+                                        <text x="90" y="120" text-anchor="middle" font-size="1rem" fill="#888">Calories needed</text>
+                                        <text x="90" y="140" text-anchor="middle" font-size="0.9rem" fill="#bbb">⚡</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="calories-info">
+                                    <div class="calories-item mb-3">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <span style="font-size:1.3rem; color:#FF8C42; margin-right:8px;"><i class="fas fa-utensils"></i></span>
+                                            <span style="font-weight:700; font-size:1.1rem;">1750 kcal</span>
+                                            <span class="ms-2 text-muted" style="font-size:0.95rem;">Eaten calories</span>
+                                        </div>
+                                    </div>
+                                    <!-- Nutrition Bars -->
+                                    <div class="nutrition-bars">
+                                        <div class="nutrition-item d-flex align-items-center mb-2">
+                                            <span class="me-3" style="font-weight:700; min-width:80px; color:#23294B; text-align:left; display:inline-block;">120 <span style="color:#bbb; font-weight:400;">/325g</span></span>
+                                            <div style="flex:1;">
+                                                <div class="d-flex justify-content-between mb-1 align-items-center">
+                                                    <span style="color:#bbb; font-size:1.05rem; font-weight:600;">Carbohydrates</span>
+                                                    <span style="font-weight:700; color:#23294B;">37%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar carbs-bar" style="width: 37%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nutrition-item d-flex align-items-center mb-2">
+                                            <span class="me-3" style="font-weight:700; min-width:80px; color:#23294B; text-align:left; display:inline-block;">70 <span style="color:#bbb; font-weight:400;">/75g</span></span>
+                                            <div style="flex:1;">
+                                                <div class="d-flex justify-content-between mb-1 align-items-center">
+                                                    <span style="color:#bbb; font-size:1.05rem; font-weight:600;">Proteins</span>
+                                                    <span style="font-weight:700; color:#23294B;">93%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar protein-bar" style="width: 93%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nutrition-item d-flex align-items-center">
+                                            <span class="me-3" style="font-weight:700; min-width:80px; color:#23294B; text-align:left; display:inline-block;">20 <span style="color:#bbb; font-weight:400;">/44g</span></span>
+                                            <div style="flex:1;">
+                                                <div class="d-flex justify-content-between mb-1 align-items-center">
+                                                    <span style="color:#bbb; font-size:1.05rem; font-weight:600;">Fats</span>
+                                                    <span style="font-weight:700; color:#23294B;">45%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar fats-bar" style="width: 45%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer-section p-4 border-top">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                    <div class="footer-links mb-2 mb-md-0">
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#" class="me-3">Terms and Conditions</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- Sidebar Right -->
+        <aside class="sidebar-right">
+            <!-- User Info -->
+            <div class="card mb-4">
+                <div class="card-body d-flex align-items-center">
+                    <div class="profile-pic-square me-3">
+                        <img src="../img/suryanto.jpeg" alt="Profile" class="img-fluid">
+                    </div>
+                    <div>
+                        <div class="fw-bold" style="font-size:1.1rem;">Suryanto</div>
+                        <div class="text-muted" style="font-size:0.95rem;">Member</div>
+                    </div>
+                    <i class="fas fa-bell ms-auto" style="color:#FF8C42; font-size:1.2rem;"></i>
+                </div>
+            </div>
+            <!-- Calendar -->
+            <div class="card calendar-card mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6>September 2028</h6>
+                        <div>
+                            <i class="fas fa-chevron-left me-2"></i>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-header">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                        </div>
+                        <div class="calendar-days">
+                            <span>4</span>
+                            <span class="active">5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-schedule mb-4">
+                <!-- Breakfast -->
+                <div class="meal-item mb-3">
+                    <div class="meal-header d-flex align-items-center">
+                        <input type="checkbox" checked style="accent-color:#FF985D; width:18px; height:18px; margin-right:8px;">
+                        <span class="meal-name fw-semibold me-2">Breakfast</span>
+                        <span class="meal-calories badge rounded-pill" style="background:#bdbdbd; color:#333; font-weight:500; margin-left:auto;">300 kcal</span>
+                    </div>
+                    <div class="meal-card" style="background:#FF985D; border-radius:14px;">
+                        <img src="../img/breakfast.png" alt="Breakfast">
+                        <div class="meal-info">
+                            <h6>Scrambled Eggs with Spinach & Whole Grain Toast</h6>
+                            <div class="meal-nutrients">
+                                <span>
+                                    <img src="../img/roti.png" alt="Carbs" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>C</b> 25g
+                                </span>
+                                <span>
+                                    <img src="../img/ikan.png" alt="Protein" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>P</b> 20g
+                                </span>
+                                <span>
+                                    <img src="../img/air.png" alt="Fats" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>F</b> 12g
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch -->
+                <div class="meal-item mb-3">
+                    <div class="meal-header d-flex align-items-center">
+                        <input type="checkbox" style="accent-color:#FDD8C2; width:18px; height:18px; margin-right:8px;">
+                        <span class="meal-name fw-semibold me-2">Lunch</span>
+                        <span class="meal-calories badge rounded-pill" style="background:#FDD8C2; color:#333; font-weight:500; margin-left:auto;">450 kcal</span>
+                    </div>
+                    <div class="meal-card" style="background:#FDD8C2; border-radius:14px;">
+                        <img src="../img/lunch.png" alt="Lunch">
+                        <div class="meal-info">
+                            <h6>Grilled Chicken Salad with Avocado and Quinoa</h6>
+                            <div class="meal-nutrients">
+                                <span>
+                                    <img src="../img/roti.png" alt="Carbs" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>C</b> 40g
+                                </span>
+                                <span>
+                                    <img src="../img/ikan.png" alt="Protein" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>P</b> 35g
+                                </span>
+                                <span>
+                                    <img src="../img/air.png" alt="Fats" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>F</b> 20g
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Snack -->
+                <div class="meal-item mb-3">
+                    <div class="meal-header d-flex align-items-center">
+                        <input type="checkbox" style="accent-color:#FFE6B5; width:18px; height:18px; margin-right:8px;">
+                        <span class="meal-name fw-semibold me-2">Snack</span>
+                        <span class="meal-calories badge rounded-pill" style="background:#FFE6B5; color:#333; font-weight:500; margin-left:auto;">200 kcal</span>
+                    </div>
+                    <div class="meal-card" style="background:#FFE6B5; border-radius:14px;">
+                        <img src="../img/snack.png" alt="Snack">
+                        <div class="meal-info">
+                            <h6>Greek Yogurt with Mixed Berries and Almonds</h6>
+                            <div class="meal-nutrients">
+                                <span>
+                                    <img src="../img/roti.png" alt="Carbs" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>C</b> 18g
+                                </span>
+                                <span>
+                                    <img src="../img/ikan.png" alt="Protein" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>P</b> 12g
+                                </span>
+                                <span>
+                                    <img src="../img/air.png" alt="Fats" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>F</b> 10g
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dinner -->
+                <div class="meal-item mb-4">
+                    <div class="meal-header d-flex align-items-center">
+                        <input type="checkbox" style="accent-color:#FFE1C9; width:18px; height:18px; margin-right:8px;">
+                        <span class="meal-name fw-semibold me-2">Dinner</span>
+                        <span class="meal-calories badge rounded-pill" style="background:#FFE1C9; color:#333; font-weight:500; margin-left:auto;">500 kcal</span>
+                    </div>
+                    <div class="meal-card" style="background:#FFE1C9; border-radius:14px;">
+                        <img src="../img/dinner.png" alt="Dinner">
+                        <div class="meal-info">
+                            <h6>Grilled Chicken with Sweet Potato and Green Beans</h6>
+                            <div class="meal-nutrients">
+                                <span>
+                                    <img src="../img/roti.png" alt="Carbs" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>C</b> 45g
+                                </span>
+                                <span>
+                                    <img src="../img/ikan.png" alt="Protein" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>P</b> 35g
+                                </span>
+                                <span>
+                                    <img src="../img/air.png" alt="Fats" style="width:14px;vertical-align:middle;margin-right:2px;">
+                                    <b>F</b> 20g
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6>Recent Activity</h6>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="activity-item mb-3">
+                        <div class="activity-avatar">S</div>
+                        <div class="activity-info">
+                            <div class="activity-time">12:45 PM</div>
+                            <div class="activity-text">
+                                <strong>Ladya Mortimov</strong> logged her lunch meal: 
+                                Grilled Chicken Wrap with Avocado and Spinach (450 kcal)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

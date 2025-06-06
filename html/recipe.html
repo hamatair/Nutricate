@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Details | Nutricate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/recipe.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div class="dashboard-grid">
+  <!-- Sidebar/Navbar -->
+  <aside class="sidebar">
+      <div class="sidebar-header p-3">
+          <h3 class="brand-text">NUTRICARE</h3>
+      </div>
+      <nav class="nav flex-column p-3">
+          <a class="nav-link" href="dashboard.html">
+              <img src="../img/SquaresFour.png" alt="Dashboard" style="width:20px; height:20px; margin-right:10px;">
+              Dashboard
+          </a>
+          <a class="nav-link active" href="recipe.html">
+              <img src="../img/ForkKnife.png" alt="Healthy Menu" style="width:20px; height:20px; margin-right:10px;">
+              Healthy Menu
+          </a>
+          <a class="nav-link" href="#">
+              <img src="../img/BowlFood.png" alt="Meal Plan" style="width:20px; height:20px; margin-right:10px;">
+              Meal Plan
+          </a>
+          <a class="nav-link" href="#">
+              <img src="../img/Heartbeat.png" alt="Health Insights" style="width:20px; height:20px; margin-right:10px;">
+              Health Insights
+          </a>
+      </nav>
+      <div class="sidebar-footer p-3 mt-auto">
+          <a href="#" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-panel" style="background: #FFF9F3;">
+    <!-- Header -->
+    <div class="header-bar d-flex align-items-center justify-content-between px-4 py-3" style="border-radius: 0 20px 0 0; border-bottom: 1px solid #f0f0f0; background: none;">
+      <div class="d-flex align-items-center header-title-group">
+        <a href="#" class="back-link me-3">← Back to Menu</a>
+        <h4 class="mb-0 fw-bold">Recipe Details</h4>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <div class="search-icon">
+          <img src="../img/search.png" alt="Search" style="width:20px; height:20px;">
+        </div>
+        <div class="notification-icon">
+          <img src="../img/notif.png" alt="Notification" style="width:20px; height:20px;">
+        </div>
+        <div class="user-profile">
+          <img src="../img/suryanto.jpeg" alt="FotoProfil" style="width:20px; height:20px;">
+          <div>
+            <div class="fw-bold" style="font-size: 0.9rem;">Suryanto</div>
+            <div style="font-size: 0.8rem; color: #888;">Member</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="flex-grow-1 d-flex align-items-stretch recipe-layout">
+      <!-- Kiri: recipe-card -->
+      <div class="recipe-card-section">
+        <div class="recipe-card d-flex flex-column" style="flex:1 1 0; min-width:0;">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" class="recipe-image" alt="Grilled Turkey Breast">
+          <div class="recipe-info-list">
+            <div class="info-row">
+              <span class="info-icon"><img src="../img/Clock.png" alt="Eat Time"></span>
+              <span class="info-label">Eat Time</span>
+              <span class="info-value">12:30 PM</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><img src="../img/prep.png" alt="Prep Time"></span>
+              <span class="info-label">Prep Time</span>
+              <span class="info-value">10 minutes</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><img src="../img/CookingPot.png" alt="Cook Time"></span>
+              <span class="info-label">Cook Time</span>
+              <span class="info-value">15 minutes</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><img src="../img/difficult.png" alt="Difficulty"></span>
+              <span class="info-label">Difficulty</span>
+              <span class="info-value">Medium</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><img src="../img/totalstep.png" alt="Total Steps"></span>
+              <span class="info-label">Total Steps</span>
+              <span class="info-value">5 steps</span>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><img src="../img/health.png" alt="Health Score"></span>
+              <span class="info-label">Health Score</span>
+              <span class="info-value">9/10</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="reviews-section">
+            <div class="review-header d-flex justify-content-between align-items-center">
+              <span class="review-title">Reviews</span>
+              <div>
+                <span class="review-stars">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </span>
+                <span class="review-score ms-2">4.8/5</span>
+              </div>
+            </div>
+            <div class="review-count mb-3">by 125 People</div>
+            
+            <!-- Review 1 -->
+            <div class="review-box">
+              <div class="review-comment mb-2">
+                Very easy to make, and the portion was just right. I added a little garlic to the rice for extra flavor. This will be a regular meal in my meal prep rotation.
+              </div>
+              <div class="review-user-row d-flex align-items-center">
+                <div class="review-user-img me-3">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah">
+                </div>
+                <div class="review-user-info d-flex flex-column">
+                  <span class="review-user-name">Sarah Murad</span>
+                  <span class="review-user-rating">
+                    <span class="review-star">★</span>
+                    <span>5/5</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Review 2 -->
+            <div class="review-box">
+              <div class="review-comment mb-2">
+                This is my go-to lunch recipe now! Simple, nutritious, and delicious. I love how quickly it comes together on busy days.
+              </div>
+              <div class="review-user-row d-flex align-items-center">
+                <div class="review-user-img me-3">
+                  <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Linda">
+                </div>
+                <div class="review-user-info d-flex flex-column">
+                  <span class="review-user-name">Linda Rawls</span>
+                  <span class="review-user-rating">
+                    <span class="review-star">★</span>
+                    <span>4.7/5</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tengah: Main Recipe Detail -->
+      <div class="main-content-section">
+        <div class="flex-grow-1 px-4 d-flex flex-column" style="flex:2 1 0; min-width:0;">
+          <h5 class="fw-bold mb-2 mt-2">Grilled Turkey Breast with Steamed Asparagus and Brown Rice</h5>
+          <div class="recipe-description-card mb-4">
+            <span class="badge-lunch mb-2">Lunch</span>
+            <div class="recipe-description">
+              A lean and balanced meal that's perfect for a post-workout lunch or a healthy midday option. This meal provides a great balance of protein, fiber, and healthy fats while being low in calories. The grilled turkey breast offers a rich source of lean protein, while the steamed asparagus and brown rice provide essential vitamins and minerals.
+            </div>
+          </div>
+          <div class="row g-4">
+            <!-- Tools & Equipment -->
+            <div class="col-lg-4">
+              <div class="tools-equipment-section mb-4">
+                <div class="tools-equipment-title mb-2 text-start">Tools & Equipment</div>
+                <ul class="tools-list-vertical list-unstyled mb-0">
+                  <li><span class="tool-circle">1</span>Grill pan or outdoor grill</li>
+                  <li><span class="tool-circle">2</span>Medium pot for steaming</li>
+                  <li><span class="tool-circle">3</span>Saucepan for cooking brown rice</li>
+                  <li><span class="tool-circle">4</span>Tongs for turning turkey</li>
+                  <li><span class="tool-circle">5</span>Cutting board</li>
+                  <li><span class="tool-circle">6</span>Knife</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Directions -->
+            <div class="col-lg-5">
+              <div class="directions-section mb-4">
+                <div class="directions-title mb-2">Directions</div>
+                <ul class="directions-list list-unstyled mb-0">
+                  <li>
+                    <span class="step-circle">1</span>
+                    <div class="direction-content">
+                      <div class="direction-title">Prepare the Turkey</div>
+                      <div class="direction-desc">Season the turkey breast with olive oil, salt, and pepper. Set aside.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="step-circle">2</span>
+                    <div class="direction-content">
+                      <div class="direction-title">Cook the Brown Rice</div>
+                      <div class="direction-desc">In a saucepan, cook 1/2 cup of brown rice in 1 cup of water. Let it simmer for 15 minutes or until fully cooked.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="step-circle">3</span>
+                    <div class="direction-content">
+                      <div class="direction-title">Grill the Turkey</div>
+                      <div class="direction-desc">Preheat the grill pan over medium heat. Grill the turkey breast for 6–7 minutes on each side until fully cooked (internal temp: 165°F).</div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="step-circle">4</span>
+                    <div class="direction-content">
+                      <div class="direction-title">Steam the Asparagus</div>
+                      <div class="direction-desc">In a medium pot, steam the asparagus for 5 minutes or until tender.</div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="step-circle">5</span>
+                    <div class="direction-content">
+                      <div class="direction-title">Serve and Garnish</div>
+                      <div class="direction-desc">Arrange the turkey breast, brown rice, and asparagus on a plate. Garnish with a lemon wedge.</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Notes -->
+            <div class="col-lg-3">
+              <div class="notes-section mt-2">
+                <div class="notes-title">Notes</div>
+                <ul class="notes-list">
+                  <li><span class="notes-dot"></span>For added flavor, marinate the turkey in lemon juice and garlic for 30 minutes before grilling.</li>
+                  <li><span class="notes-dot"></span>You can replace brown rice with quinoa or couscous for variety.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Kanan: Sidebar Kanan -->
+      <div class="right-sidebar-section">
+        <!-- Servings Card -->
+        <div class="servings-card mb-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-bold">Total Servings</span>
+            <div class="serving-controls">
+              <button class="serving-btn" onclick="changeServing(-1)">-</button>
+              <span class="serving-count" id="servingCount">2</span>
+              <button class="serving-btn" onclick="changeServing(1)">+</button>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <h6 class="fw-bold mb-3">Ingredients</h6>
+            <ul class="list-unstyled ingredients-list" id="ingredientsList">
+              <li><span class="ingredient-num">1</span>200 g turkey breast</li>
+              <li><span class="ingredient-num">2</span>1 cup asparagus (steamed)</li>
+              <li><span class="ingredient-num">3</span>1/2 cup cooked brown rice</li>
+              <li><span class="ingredient-num">4</span>1 tbsp olive oil</li>
+              <li><span class="ingredient-num">5</span>Salt and pepper to taste</li>
+              <li><span class="ingredient-num">6</span>Lemon for garnish</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Nutrition Badges -->
+        <div class="nutrition-badges mb-3">
+          <div class="nutrition-badge badge-calories">
+            <div class="nutrition-icon">
+              <img src="../img/calories.png" alt="Calories">
+            </div>
+            <div class="nutrition-value">450</div>
+            <div class="nutrition-label">Calories<br><span class="nutrition-unit">kcal</span></div>
+          </div>
+          <div class="nutrition-badge badge-carbs">
+            <div class="nutrition-icon">
+              <img src="../img/carbohidrate.png" alt="Carbs">
+            </div>
+            <div class="nutrition-value">40</div>
+            <div class="nutrition-label">Carbs<br><span class="nutrition-unit">gr</span></div>
+          </div>
+          <div class="nutrition-badge badge-protein">
+            <div class="nutrition-icon">
+              <img src="../img/protein.png" alt="Protein">
+            </div>
+            <div class="nutrition-value">35</div>
+            <div class="nutrition-label">Protein<br><span class="nutrition-unit">gr</span></div>
+          </div>
+          <div class="nutrition-badge badge-fats">
+            <div class="nutrition-icon">
+              <img src="../img/fats.png" alt="Fats">
+            </div>
+            <div class="nutrition-value">12</div>
+            <div class="nutrition-label">Fats<br><span class="nutrition-unit">gr</span></div>
+          </div>
+        </div>
+        <!-- Nutrition Facts Card -->
+        <div class="nutrition-card">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="fw-bold mb-0" style="font-size:1.13rem;">Nutrition Facts</h6>
+            <span class="nutrition-serving-label">Per Serving</span>
+          </div>
+          <table class="nutrition-table w-100">
+            <tr class="nutrition-main-row">
+              <th>Calories</th>
+              <td>450 <span class="nutrition-unit">kcal</span></td>
+            </tr>
+            <tr><td colspan="2"><div class="nutrition-divider"></div></td></tr>
+            <tr><th>Carbohydrates</th><td>40 <span class="nutrition-unit">gr</span></td></tr>
+            <tr><th>Protein</th><td>35 <span class="nutrition-unit">gr</span></td></tr>
+            <tr><th>Total Fat</th><td>12 <span class="nutrition-unit">gr</span></td></tr>
+            <tr><th>Fiber</th><td>7 <span class="nutrition-unit">gr</span></td></tr>
+            <tr><th>Sodium</th><td>420 <span class="nutrition-unit">mg</span></td></tr>
+            <tr><th>Cholesterol</th><td>75 <span class="nutrition-unit">mg</span></td></tr>
+            <tr><th>Sugars</th><td>4 <span class="nutrition-unit">gr</span></td></tr>
+            <tr><th>Vitamin C</th><td>20% DV</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Footer (sama seperti dashboard) -->
+    <footer class="footer-section p-4 border-top">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+          <div class="footer-links mb-2 mb-md-0">
+              <a href="#" class="me-3">Privacy Policy</a>
+              <a href="#" class="me-3">Terms and Conditions</a>
+              <a href="#">Contact</a>
+          </div>
+          <div class="social-icons">
+              <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
+    </footer>
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/recipe.js"></script>
+</body>
+</html>

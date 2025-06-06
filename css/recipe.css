@@ -1,0 +1,1212 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;         /* Ganti dari 100vw */
+  overflow-x: hidden;
+}
+
+body {
+  background: #FFF9F3;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Brand & Logo */
+.brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #FF8C42;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background: #fff;
+  min-height: 100vh;
+  border-radius: 0 24px 24px 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  position: relative;
+  padding: 0;
+  flex: 0 0 250px; /* Sidebar fix 250px, tidak shrink */
+  min-width: 250px;
+  max-width: 250px;
+  z-index: 2;
+}
+
+.sidebar-header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #FF8C42;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  padding: 2.5rem 0 0 2rem;
+}
+
+.sidebar .nav {
+  flex-direction: column;
+  gap: 0;
+}
+
+.sidebar .nav-link {
+  color: #888;
+  font-weight: 600;
+  padding: 14px 28px;
+  margin: 6px 18px;
+  border-radius: 12px;
+  transition: all 0.2s;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.sidebar .nav-link.active {
+  background: #FF8C42;
+  color: #fff !important;
+  box-shadow: 0 2px 8px #ffe5d1;
+}
+
+.sidebar .nav-link:hover:not(.active) {
+  background: #FFF4EF;
+  color: #FF8C42;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.sidebar-footer .nav-link {
+  color: #FF8C42;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logout Button */
+.logout-btn {
+  position: absolute;
+  left: 0; right: 0; bottom: 2rem;
+  padding: 0 1.5rem;
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 0; 
+}
+
+.back-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #FF8C42;
+}
+
+/* Recipe Card Styles */
+.recipe-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  padding: 2.2rem 2.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe-image {
+  border-radius: 18px;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+}
+
+.recipe-info {
+  background: #FFF9F3;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.recipe-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+  color: #888;
+}
+
+.recipe-info-item:last-child {
+  border-bottom: none;
+}
+
+.info-dot {
+  color: #FF8C42;
+  margin-right: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Badge Styles */
+.badge-lunch {
+  background: #FFE5D1;
+  color: #FF8C42;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Recipe Description */
+.recipe-description {
+  background: #FFF9F3;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem 0 1.5rem 0;
+  line-height: 1.6;
+  color: #666;
+  font-size: 1.05rem;
+}
+
+/* Tools and Directions Sections */
+.tools-section, .directions-section {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.step-circle, .tool-circle {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  background: #FF8C42;
+  color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tools-list li, .directions-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.directions-list li {
+  margin-bottom: 20px;
+}
+
+.direction-content {
+  flex: 1;
+}
+
+.direction-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2px;
+  font-size: 1.01rem;
+}
+
+.direction-desc {
+  color: #888;
+  font-size: 0.97rem;
+}
+
+/* Notes Section */
+.notes-section {
+  background: #FFF9F3;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.notes-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+.notes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 0.97rem;
+}
+
+.notes-dot {
+  width: 18px;
+  height: 18px;
+  background: #C2E66E; /* Ubah ke warna baru */
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* Reviews Section */
+.reviews-section {
+  margin-top: 1.5rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.review-rating {
+  color: #FF8C42;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.review-box {
+  background: #FFF9F3;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.review-content {
+  display: flex;
+  gap: 12px;
+}
+
+.review-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.review-text {
+  flex: 1;
+}
+
+.review-comment {
+  font-size: 0.97rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.review-user {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.review-star {
+  color: #FF8C42;
+}
+
+.review-user-row {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.review-user-img {
+  margin-top: 0;
+  margin-right: 12px;
+}
+
+.review-user-img img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #FFE5D1;
+  display: block;
+}
+
+.review-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.review-user-rating {
+  color: #888;
+  font-size: 0.93rem;
+  margin-top: 2px;
+}
+
+.review-star {
+  color: #FF8C42;
+  margin-right: 3px;
+}
+
+.review-user-row {
+  margin-top: 6px;
+}
+
+.review-user-info {
+  min-width: 0;
+}
+
+.review-user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.review-user-rating {
+  color: #888;
+  font-size: 0.93rem;
+  margin-top: 2px;
+}
+
+.review-star {
+  color: #FF8C42;
+  margin-right: 3px;
+}
+
+.review-user-img img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #FFE5D1;
+  display: block;
+}
+
+/* Left Recipe Card Custom Style */
+
+
+.recipe-image {
+  border-radius: 18px 18px 0 0;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+.recipe-info-list {
+  background: #fff;
+  border-radius: 0 0 18px 18px;
+  padding: 1.2rem 1.2rem 0.5rem 1.2rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.info-icon {
+  width: 32px;
+  height: 32px;
+  background: #FFE5D1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #FF8C42;
+  flex-shrink: 0;
+}
+
+.info-label {
+  color: #888;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.info-value {
+  color: #222;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.divider {
+  border-bottom: 1px solid #f0f0f0;
+  margin: 1.2rem 1.2rem 1rem 1.2rem;
+}
+
+.reviews-section {
+  padding: 0 1.2rem;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+
+.review-title {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.05rem;
+}
+
+.review-stars {
+  color: #FFB76B;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.review-score {
+  color: #888;
+  font-size: 0.98rem;
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.review-count {
+  color: #888;
+  font-size: 0.93rem;
+  margin-bottom: 0.7rem;
+}
+
+.review-box {
+  background: #FFF9F3;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.review-user-img {
+  margin-top: 2px;
+}
+
+.review-user-img img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #FFE5D1;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+  width: 100%;
+  padding: 2rem 1rem 0 1rem;  /* Tambah padding horizontal */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.servings-card, .nutrition-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Serving Controls */
+.serving-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.serving-btn {
+  background: #FF8C42;
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.serving-btn:hover {
+  background: #e67a35;
+  transform: scale(1.08);
+}
+
+.serving-count {
+  font-weight: 700;
+  font-size: 1.1rem;
+  min-width: 24px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Ingredients List */
+.ingredients-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #23294B;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ingredient-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #FFF9F3;
+  color: #8A8C90;
+  border: 2px solid #8A8C90;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 14px;
+  flex-shrink: 0;
+  box-shadow: none;
+}
+
+/* Nutrition Badges */
+.nutrition-badges {
+  display: flex;
+  gap: 12px; 
+  margin-bottom: 1.2rem;
+  justify-content: flex-start;
+}
+
+.nutrition-badge {
+  flex: 1 1 0;
+  border-radius: 14px;
+  padding: 10px 0 6px 0; 
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 65px;
+  max-width: 80px;
+  box-shadow: 0 2px 8px rgba(255,140,66,0.06);
+}
+
+.nutrition-icon {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 8px #f5e7d8;
+}
+.nutrition-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.nutrition-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 1px;
+}
+
+.nutrition-label {
+  font-size: 0.7rem;
+  color: #222;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.nutrition-unit {
+  font-size: 0.85em;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Badge Colors */
+.badge-calories {
+  background: #FFB76B;
+  color: #fff;
+}
+.badge-carbs {
+  background: #FFD88C;
+  color: #FF8C42;
+}
+.badge-protein {
+  background: #FF985D;
+  color: #fff;
+}
+.badge-fats {
+  background: #EDEDED;
+  color: #888;
+}
+
+/* Header User Profile & Icons */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FF8C42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.notification-icon, .search-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.notification-icon:hover, .search-icon:hover {
+  background: #ffe5d1;
+}
+
+.search-icon {
+  margin-right: 12px;
+}
+
+/* Divider */
+.divider {
+  border-bottom: 1px solid #f0f0f0;
+  margin: 1rem 0;
+}
+
+/* Deskripsi Card Abu-Abu */
+.recipe-description-card {
+  background: #F6F6F6;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.recipe-description-card .badge-lunch {
+  margin-bottom: 0.7rem;
+}
+.recipe-description {
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: #666;
+  font-size: 1.05rem;
+}
+
+/* Tools Horizontal */
+.tools-list-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tools-list-horizontal li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+  min-width: 210px;
+}
+
+/* Notes Dot Orange */
+.notes-list {
+  padding-left: 0;
+}
+.notes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.notes-dot {
+  width: 18px;
+  height: 18px;
+  background: #C2E66E; /* Ubah ke warna baru */
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* Tools Vertical List */
+.tools-list-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 0;
+}
+.tools-list-vertical li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Tools & Directions Layout */
+.tools-directions-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 2.2rem;
+}
+.tools-col {
+  width: 230px;
+}
+.tools-title {
+  font-weight: 700;
+  color: #23294B;
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+}
+.tools-title-invisible {
+  visibility: hidden;
+  height: 24px;
+  margin-bottom: 18px;
+}
+.directions-col {
+  min-width: 0;
+}
+.directions-title {
+  font-weight: 700;
+  color: #23294B;
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+}
+.tools-list-vertical {
+  gap: 12px;
+}
+.tools-list-vertical li {
+  color: #23294B;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.tool-circle {
+  background: #FF8C42;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.directions-list {
+  border-left: 2px solid #E6E6E6;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.directions-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 22px;
+  position: relative;
+  padding-left: 0;
+}
+.step-circle {
+  background: #FFCB65; 
+  color: #23294B;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-right: 16px;
+  margin-left: -17px;
+  z-index: 1;
+  box-shadow: 0 2px 8px #f5e7d8;
+}
+.direction-title {
+  font-weight: 700;
+  color: #23294B;
+  font-size: 1.01rem;
+  margin-bottom: 2px;
+}
+.direction-desc {
+  color: #888;
+  font-size: 0.97rem;
+}
+.directions-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Notes Section */
+.notes-section {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+.notes-title {
+  font-weight: 700;
+  color: #23294B;
+  font-size: 1.08rem;
+  margin-bottom: 12px;
+}
+.notes-list li {
+  color: #23294B;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+.notes-dot {
+  width: 18px;
+  height: 18px;
+  background: #C2E66E; 
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* Ingredients Card & List */
+.servings-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.servings-card .fw-bold {
+  color: #23294B;
+  font-size: 1.08rem;
+}
+
+.serving-controls {
+  gap: 10px;
+}
+
+.serving-btn {
+  background: #FF8C42;
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px #ffe5d1;
+}
+
+.serving-btn:active {
+  background: #e67a35;
+}
+
+.serving-count {
+  font-weight: 700;
+  font-size: 1.1rem;
+  min-width: 24px;
+  text-align: center;
+  display: inline-block;
+  color: #23294B;
+}
+
+.divider {
+  border-bottom: 1px solid #ECECEC;
+  margin: 1rem 0 1.2rem 0;
+}
+
+/* Nutrition Card */
+.nutrition-card {
+  background: #fff9f3;
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.nutrition-card h6 {
+  font-weight: 700;
+  color: #23294B;
+  font-size: 1.13rem;
+  margin-bottom: 0;
+}
+
+.nutrition-serving-label {
+  color: #8A8C90;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 10px;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  font-size: 1rem;
+  color: #23294B;
+  font-weight: 500;
+  padding: 10px 0 10px 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.nutrition-table th {
+  font-weight: 500;
+}
+
+.nutrition-table td {
+  text-align: right;
+  font-weight: 700;
+}
+
+.nutrition-main-row th,
+.nutrition-main-row td {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #23294B;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.nutrition-main-row td {
+  font-size: 1.15rem;
+}
+
+.nutrition-unit {
+  font-size: 0.8rem;
+  color: #23294B;    
+  font-weight: 500;    
+}
+
+.nutrition-divider {
+  border-bottom: 1.5px solid #ECECEC;
+  width: 100%;
+  margin: 0;
+  height: 0;
+  padding: 0;
+}
+
+/* Konsistensi Sidebar/Navbar dengan Dashboard */
+.sidebar {
+  background: #fff;
+  min-height: 100vh;
+  border-radius: 0 24px 24px 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  position: relative;
+  padding: 0;
+}
+
+.sidebar-header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #FF8C42;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  padding: 2.5rem 0 0 2rem;
+}
+
+.sidebar .nav {
+  flex-direction: column;
+  gap: 0;
+}
+
+.sidebar .nav-link {
+  color: #888;
+  font-weight: 600;
+  padding: 14px 28px;
+  margin: 6px 18px;
+  border-radius: 12px;
+  transition: all 0.2s;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.sidebar .nav-link.active {
+  background: #FF8C42;
+  color: #fff !important;
+  box-shadow: 0 2px 8px #ffe5d1;
+}
+
+.sidebar .nav-link:hover:not(.active) {
+  background: #FFF4EF;
+  color: #FF8C42;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.sidebar-footer .nav-link {
+  color: #FF8C42;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Konsistensi Header Bar */
+.header-bar {
+  background: #fff;
+  border-radius: 0 20px 0 0;
+  border-bottom: 1px solid #f0f0f0;
+  min-height: 70px;
+  padding-left: 300px; 
+  transition: padding-left 0.2s;
+}
+
+@media (max-width: 1200px) {
+  .header-bar {
+    padding-left: 0 !important;
+  }
+}
+
+/* Konsistensi Footer */
+.footer-section {
+  background: #fff;
+  border-radius: 0 0 20px 0;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 32px;
+  padding: 1.5rem 2rem;
+  margin-left: 14rem; 
+}
+
+@media (max-width: 1200px) {
+  .footer-section {
+    margin-left: 0;
+  }
+}
+
+.dashboard-grid {
+  display: flex !important;      
+  width: 100% !important;        
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #FFF9F3;           
+  grid-template-columns: unset !important; 
+  grid-template-rows: unset !important;    
+}
+
+.recipe-layout {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding-left: 300px;
+}
+
+/* Update main content container */
+.flex-grow-1.px-4.d-flex.flex-column {
+  padding-left: 16px !important;  
+  padding-right: 16px !important;
+}
+
+.main-panel {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  background: #FFF9F3;
+  /* Hapus padding/margin kiri jika ada */
+}
+
+.header-title-group {
+  margin-left: 17rem; 
+}
+
+@media (max-width: 1200px) {
+  .header-title-group {
+    margin-left: 0;
+  }
+}
