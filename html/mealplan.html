@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Nutricate Meal Plan</title>
+  <link rel="stylesheet" href="../css/mealplan.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <aside>
+      <div>
+        <h1 class="logo">NUTRICATE</h1>
+        <nav>
+          <a href="#"><i class="fas fa-th-large"></i>Dashboard</a>
+          <a href="#"><i class="fas fa-utensils"></i>Healthy Menu</a>
+          <a href="#" class="active"><i class="fas fa-bread-slice"></i>Meal Plan</a>
+          <a href="#"><i class="far fa-heart"></i>Health Insights</a>
+        </nav>
+      </div>
+      <button class="logout"><i class="fas fa-sign-out-alt"></i>Logout</button>
+    </aside>
+    <main>
+      <h2>Meal Plan</h2>
+      <div class="date-search">
+        <div class="date-controls" role="group" aria-label="Date navigation">
+          <button aria-label="Previous date" id="prevDate"><i class="fas fa-chevron-left"></i></button>
+          <button aria-label="Next date" id="nextDate"><i class="fas fa-chevron-right"></i></button>
+          <button class="date-label" aria-haspopup="listbox" aria-expanded="false" aria-label="Select date" id="dateLabel">
+            <span id="dateDisplay">5th September <span>2028</span></span> <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="calendar-popup" id="calendarPopup" hidden>
+            <div class="calendar-header">
+              <button id="calendarPrevMonth" aria-label="Previous month">&lt;</button>
+              <div class="calendar-month-year" id="calendarMonthYear"></div>
+              <button id="calendarNextMonth" aria-label="Next month">&gt;</button>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </div>
+        </div>
+        <div class="search-box">
+          <label for="search" class="sr-only">Search placeholder</label>
+          <input type="search" id="search" placeholder="Search placeholder" />
+        </div>
+      </div>
+      <div class="filter-tabs" role="tablist" aria-label="Meal type filter" id="filterTabs">
+        <button class="active" role="tab" aria-selected="true" tabindex="0" data-filter="all">All</button>
+        <button role="tab" aria-selected="false" tabindex="-1" data-filter="Breakfast">Breakfast</button>
+        <button role="tab" aria-selected="false" tabindex="-1" data-filter="Lunch">Lunch</button>
+        <button role="tab" aria-selected="false" tabindex="-1" data-filter="Snack">Snack</button>
+        <button role="tab" aria-selected="false" tabindex="-1" data-filter="Dinner">Dinner</button>
+      </div>
+      <div class="meal-cards" aria-label="Meal calories overview">
+                <section class="meal-card" aria-label="Breakfast calories" data-meal="Breakfast">
+          <h3>Breakfast</h3>
+          <div class="linear-progress-container">
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fg" id="progress-breakfast"></div>
+            </div>
+            <div class="progress-text">
+              <i class="fas fa-bolt"></i>
+              <div class="calories" id="calories-breakfast">0<span>/500</span></div>
+              <div class="unit">kcal</div>
+            </div>
+          </div>
+        </section>
+        <section class="meal-card" aria-label="Lunch calories" data-meal="Lunch">
+          <h3>Lunch</h3>
+          <div class="linear-progress-container">
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fg" id="progress-lunch"></div>
+            </div>
+            <div class="progress-text">
+              <i class="fas fa-bolt"></i>
+              <div class="calories" id="calories-lunch">0<span>/660</span></div>
+              <div class="unit">kcal</div>
+            </div>
+          </div>
+        </section>
+        <section class="meal-card" aria-label="Snack calories" data-meal="Snack">
+          <h3>Snack</h3>
+          <div class="linear-progress-container">
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fg" id="progress-snack"></div>
+            </div>
+            <div class="progress-text">
+              <i class="fas fa-bolt"></i>
+              <div class="calories" id="calories-snack">0<span>/83</span></div>
+              <div class="unit">kcal</div>
+            </div>
+          </div>
+        </section>
+        <section class="meal-card" aria-label="Dinner calories" data-meal="Dinner">
+          <h3>Dinner</h3>
+          <div class="linear-progress-container">
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fg" id="progress-dinner"></div>
+            </div>
+            <div class="progress-text">
+              <i class="fas fa-bolt"></i>
+              <div class="calories" id="calories-dinner">0<span>/440</span></div>
+              <div class="unit">kcal</div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="search-result" aria-label="Search Result" id="searchResult">
+        <article class="search-item" data-meal="Breakfast" data-calories="320">
+          <img src="https://storage.googleapis.com/a1aa/image/14e20a43-2204-46a1-7e0e-e0a7a657c35c.jpg" alt="Avocado Toast with Poached Egg on toasted bread with herbs and two poached eggs" width="120" height="80" />
+          <div class="search-item-content">
+            <span class="tag breakfast">Breakfast</span>
+            <h4>Avocado Toast with Poached Egg</h4>
+            <ul class="nutrition-list">
+              <li><i class="far fa-clock"></i>320 kcal</li>
+              <li><i class="fas fa-bread-slice"></i>30g carbs</li>
+              <li><i class="fas fa-dumbbell"></i>14g protein</li>
+              <li><i class="fas fa-tint"></i>18g fats</li>
+            </ul>
+          </div>
+          <button class="btn-add" type="button">Add to Meal Plan</button>
+        </article>
+        <article class="search-item" data-meal="Lunch" data-calories="400">
+          <img src="https://storage.googleapis.com/a1aa/image/e33e80f5-2757-42eb-9afe-c0cb00d1ce61.jpg" alt="Grilled Shrimp Tacos with Mango Salsa served with mango salsa and garnished with herbs" width="120" height="80" />
+          <div class="search-item-content">
+            <span class="tag lunch">Lunch</span>
+            <h4>Grilled Shrimp Tacos with Mango Salsa</h4>
+            <ul class="nutrition-list">
+              <li><i class="far fa-clock"></i>400 kcal</li>
+              <li><i class="fas fa-bread-slice"></i>45g carbs</li>
+              <li><i class="fas fa-dumbbell"></i>28g protein</li>
+              <li><i class="fas fa-tint"></i>12g fats</li>
+            </ul>
+          </div>
+          <button class="btn-add" type="button">Add to Meal Plan</button>
+        </article>
+        <article class="search-item" data-meal="Dinner" data-calories="480">
+          <img src="https://storage.googleapis.com/a1aa/image/2682280b-8c00-4cc5-e15f-55415313a919.jpg" alt="Baked Chicken Breast with Quinoa and Kale with roasted tomatoes and quinoa" width="120" height="80" />
+          <div class="search-item-content">
+            <span class="tag dinner">Dinner</span>
+            <h4>Baked Chicken Breast with Quinoa and Kale</h4>
+            <ul class="nutrition-list">
+              <li><i class="far fa-clock"></i>480 kcal</li>
+              <li><i class="fas fa-bread-slice"></i>50g carbs</li>
+              <li><i class="fas fa-dumbbell"></i>40g protein</li>
+              <li><i class="fas fa-tint"></i>15g fats</li>
+            </ul>
+          </div>
+          <button class="btn-add" type="button">Add to Meal Plan</button>
+        </article>
+        <article class="search-item" data-meal="Breakfast" data-calories="250">
+          <img src="https://storage.googleapis.com/a1aa/image/d2952eff-d401-4a93-4a44-6b50e1619239.jpg" alt="Oatmeal with mixed fruits in a bowl" width="120" height="80" />
+          <div class="search-item-content">
+            <span class="tag breakfast">Breakfast</span>
+            <h4>Oatmeal with Mixed Fruits</h4>
+            <ul class="nutrition-list">
+              <li><i class="far fa-clock"></i>250 kcal</li>
+              <li><i class="fas fa-bread-slice"></i>40g carbs</li>
+              <li><i class="fas fa-dumbbell"></i>8g protein</li>
+              <li><i class="fas fa-tint"></i>5g fats</li>
+            </ul>
+          </div>
+          <button class="btn-add" type="button">Add to Meal Plan</button>
+        </article>
+        <article class="search-item" data-meal="Lunch" data-calories="550">
+          <img src="https://storage.googleapis.com/a1aa/image/467d70bc-ce25-4665-e538-087be157f15e.jpg" alt="Quinoa salad with vegetables and dressing" width="120" height="80" />
+          <div class="search-item-content">
+            <span class="tag lunch">Lunch</span>
+            <h4>Quinoa Salad with Veggies</h4>
+            <ul class="nutrition-list">
+              <li><i class="far fa-clock"></i>550 kcal</li>
+              <li><i class="fas fa-bread-slice"></i>60g carbs</li>
+              <li><i class="fas fa-dumbbell"></i>20g protein</li>
+              <li><i class="fas fa-tint"></i>15g fats</li>
+            </ul>
+          </div>
+          <button class="btn-add" type="button">Add to Meal Plan</button>
+        </article>
+        <article class="search-item" data-meal="Snack" data-calories="150">
+          <img src="https://storage.googleapis.com/a1aa/image/f02643de-333a-41b3-e671-c626a77a1162.jpg" alt="Greek yogurt with honey and nuts" width="120" height="80" />
+          <div class="search-item-content">
+            <span class="tag snack">Snack</span>
+            <h4>Greek Yogurt with Honey</h4>
+            <ul class="nutrition-list">
+              <li><i class="far fa-clock"></i>150 kcal</li>
+              <li><i class="fas fa-bread-slice"></i>10g carbs</li>
+              <li><i class="fas fa-dumbbell"></i>12g protein</li>
+              <li><i class="fas fa-tint"></i>4g fats</li>
+            </ul>
+          </div>
+          <button class="btn-add" type="button">Add to Meal Plan</button>
+        </article>
+        <article class="search-item" data-meal="Dinner" data-calories="400">
+          <img src="https://storage.googleapis.com/a1aa/image/bf648f4c-ae69-4dc2-48be-dfd4392f7f31.jpg" alt="Grilled salmon with steamed vegetables" width="120" height="80" />
+          <div class="search-item-content">
+            <span class="tag dinner">Dinner</span>
+            <h4>Grilled Salmon with Veggies</h4>
+            <ul class="nutrition-list">
+              <li><i class="far fa-clock"></i>400 kcal</li>
+              <li><i class="fas fa-bread-slice"></i>20g carbs</li>
+              <li><i class="fas fa-dumbbell"></i>35g protein</li>
+              <li><i class="fas fa-tint"></i>18g fats</li>
+            </ul>
+          </div>
+          <button class="btn-add" type="button">Add to Meal Plan</button>
+        </article>
+      </section>
+      </section>
+      <footer>
+        <p>Copyright © 2024 <strong>Peterdraw</strong></p>
+        <nav>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Term and conditions</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="social-icons" aria-label="Social media links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../js/mealplan.js"></script>
+</body>
+</html>
