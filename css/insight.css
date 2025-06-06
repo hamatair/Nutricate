@@ -26,6 +26,34 @@ body {
   overflow: hidden;
 }
 
+.rs{
+  width: 400px;
+}
+
+.author1{
+  width: 20px; height: 20px; background-color: #fc8f2b;
+}
+
+.author2{
+  width: 20px; height: 20px; background-color: #fdd74b;
+}
+
+.author3{
+  width: 20px; height: 20px; background-color: #60d394;
+}
+
+.author4{
+  width: 20px; height: 20px; background-color: #f16262;
+}
+
+.author5{
+  width: 20px; height: 20px; background-color: #5aa9e6;
+}
+
+.author6{
+  width: 20px; height: 20px; background-color: #a06cd5;
+}
+
 .text-orange { color: #FF985D; }
 .text-yellow { color: #FFCB65; }
 
