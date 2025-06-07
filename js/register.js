@@ -66,5 +66,6 @@ nextBtn.addEventListener("click", () => {
     img.src = images[currentStep];
   } else {
     form.submit();
+    window.location.href = "signup.html";
   }
 });

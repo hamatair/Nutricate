@@ -2,6 +2,13 @@ const calendarHeader = document.querySelector('.calendar-header');
 const calendarDays = document.querySelector('.calendar-days');
 let currentDate = new Date();
 
+
+const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("greeting").textContent = `Hello, ${username}! 👋`;
+  }
+
 function renderCalendar(date) {
   const year = date.getFullYear();
   const month = date.getMonth();
